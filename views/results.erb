@@ -1,0 +1,35 @@
+  <h1> Hangman </h1>
+  <div class="hangman">
+  <% if session[:failures] == 10 %>
+  <img src="0.jpg">
+  <% elsif session[:failures] == 9 %>
+  <img src="1.jpg">
+  <% elsif session[:failures] == 8 %>
+  <img src="2.jpg">
+  <% elsif session[:failures] == 7 %>
+  <img src="3.jpg">
+  <% elsif session[:failures] == 6 %>
+  <img src="4.jpg">
+  <% elsif session[:failures] == 5 %>
+  <img src="5.jpg">
+  <% elsif session[:failures] == 4 %>
+  <img src="6.jpg">
+  <% elsif session[:failures] == 3 %>
+  <img src="7.jpg">
+  <% elsif session[:failures] == 2 %>
+  <img src="8.jpg">
+  <% elsif session[:failures] == 1 %>
+  <img src="9.jpg"> 
+  <% elsif session[:failures] == 0 %>
+  <img src="10.jpg">
+  <% end %>
+  </div>
+  <p class="word"> <%= @format_word %> </p1>
+  <br>
+  <p> Remaining guesses: <%= session[:failures] %></p>
+  <p> Guessed letters: <%= @format_used_chars %> </p>
+  <p>Please enter your guess!</p>
+  <form method="get" action="guess">
+  <input type="text" name="hmguess">
+  <input type="submit" value="Submit Guess">
+  </form>

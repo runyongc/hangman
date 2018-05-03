@@ -1,0 +1,23 @@
+html {
+	font-size 16pt;
+	line-height: 1.4;
+  font-weight: 400;
+  margin: auto;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+h1 {
+  font-size: 40;
+  font-family: 'Rye', cursive;
+}
+body {
+  vertical-align: center;
+}
+
+p.word {
+  font-size: 20pt;
+  line-height: 2;
+  font-size: 600;
+  letter-spacing: 4px;
+}
